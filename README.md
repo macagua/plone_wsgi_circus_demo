@@ -1,6 +1,6 @@
 # Plone WSGI Circus Demo
 
-A demonstration of Plone deployment with WSGI using Circus, A Process & Socket Manager.
+A demonstration of Plone deployment with WSGI using [Circus](https://circus.readthedocs.io/), A Process & Socket Manager.
 
 This is pretty minimal, it's a bit stupid to not have
 ``zeoclient`` and ``zeoserver`` here, because you can't just
@@ -28,7 +28,7 @@ Have fun
 Create a virtual environment, executing the following command:
 
 ```bash
-$ python3.11 -m venv ./venv
+$ python3 -m venv ./venv
 ```
 
 Activate the virtual environment, executing the following command:
