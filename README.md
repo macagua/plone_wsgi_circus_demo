@@ -34,8 +34,6 @@ Install the pre-requirements Python dependencies, executing the following comman
 $ ./venv/bin/pip install -r https://dist.plone.org/release/6.0-latest/requirements.txt
 ```
 
-Hay dos demostraciones disponible en base a posible configuraciones base de Zope con WSGI usando la herramienta Circus
-
 There are two demonstrations available based on possible base configurations of Zope with WSGI using the Circus tool:
 
 ### Zope standalone
