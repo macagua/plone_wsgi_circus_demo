@@ -46,6 +46,12 @@ $ ./venv/bin/buildout
 
 This command above generates the WSGI ``zope-deploy.ini`` file used for the ``circusd`` command to start the service.
 
+```bash
+$ ./venv/bin/circusd ./zope-deploy.ini
+```
+
+Now visit [http://localhost:8080/](http://localhost:8080/), you should can create and see the **Plone** website.
+
 ### Zeo Server and clients
 
 For install a Zeo Server and clients, executing the following command:
@@ -55,6 +61,19 @@ $ ./venv/bin/buildout -c zeo.cfg
 ```
 
 This command above generates the WSGI ``zeo-deploy.ini`` file used for the ``circusd`` command to start the service.
+
+```bash
+$ ./venv/bin/circusd ./zeo-deploy.ini
+```
+
+Now visit the following links:
+
+- [http://localhost:8082/](http://localhost:8082/), you should can create and see the **Plone** website running on Zeo client 1.
+
+- [http://localhost:8083/](http://localhost:8082/), you should can create and see the **Plone** website running on Zeo client 2.
+
+- [http://localhost:8083/](http://localhost:8082/), you should can create and see the **Plone** website running on Zeo client on debug mode.
+
 
 ---
 
@@ -71,8 +90,6 @@ $ ./venv/bin/circusd ./WSGI_NAME.ini
 ```
 
 > Where ``WSGI_NAME`` you will be replace for the WSGI filename generated with the ``buildout`` command.
-
-Now visit [http://localhost:8080/](http://localhost:8080/), you should see the **Plone** website.
 
 Also can run as a daemon service, executing the following command:
 
