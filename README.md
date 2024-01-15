@@ -12,6 +12,10 @@ Have fun
 
 ## Installation
 
+Here, a tutorial step by step of deployment with Plone WSGI using Circus:
+
+### Pre dependencies
+
 Create a virtual environment, executing the following command:
 
 ```bash
@@ -30,31 +34,67 @@ Install the pre-requirements Python dependencies, executing the following comman
 $ ./venv/bin/pip install -r https://dist.plone.org/release/6.0-latest/requirements.txt
 ```
 
+Hay dos demostraciones disponible en base a posible configuraciones base de Zope con WSGI usando la herramienta Circus
+
+There are two demonstrations available based on possible base configurations of Zope with WSGI using the Circus tool:
+
+### Zope standalone
+
+For install a Zope standalone server, executing the following command:
+
 ```bash
-$ ./venv/bin/buildout -vvv
+$ ./venv/bin/buildout
 ```
+
+This command above generates the WSGI ``zope-deploy.ini`` file used for the ``circusd`` command to start the service.
+
+### Zeo Server and clients
+
+For install a Zeo Server and clients, executing the following command:
+
+```bash
+$ ./venv/bin/buildout -c zeo.cfg
+```
+
+This command above generates the WSGI ``zeo-deploy.ini`` file used for the ``circusd`` command to start the service.
+
+---
+
+## Circus scripts
+
+Circus installs some scripts to manage this project.
+
+### circus daemon
 
 Run it using ``circusd``, executing the following command:
 
 ```bash
-$ ./venv/bin/circusd ./zope-deploy.ini
+$ ./venv/bin/circusd ./WSGI_NAME.ini
 ```
+
+> Where ``WSGI_NAME`` you will be replace for the WSGI filename generated with the ``buildout`` command.
 
 Now visit [http://localhost:8080/](http://localhost:8080/), you should see the **Plone** website.
 
 Also can run as a daemon service, executing the following command:
 
 ```bash
-$ ./venv/bin/circusd --daemon ./zope-deploy.ini
+$ ./venv/bin/circusd --daemon ./WSGI_NAME.ini
 ```
 
+> Where ``WSGI_NAME`` you will be replace for the WSGI filename generated with the ``buildout`` command.
+
 This keeps ``circusd`` in the foreground mode.
+
+### circus top
 
 You can checkout the monitor stats console, like a ``top`` command, executing the following command:
 
 ```bash
 $ ./venv/bin/circus-top
 ```
+
+### circus control
 
 You can checkout the status service, executing the following command:
 
