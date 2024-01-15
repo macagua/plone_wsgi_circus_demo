@@ -19,14 +19,11 @@ This keeps circus in the foreground.
 
 You can experiment with ``circusctl`` which is similar to
 ``supervisorctl``.
-Additionally, there is circus-top to experiment with,
-and the awesome web interface that listens on
-http://localhost:8080
+Additionally, there is ``circus-top`` to experiment with.
 
 Have fun
 
 ## Installation
-
 
 Create a virtual environment, executing the following command:
 
@@ -56,7 +53,7 @@ Run it using ``circusd``, executing the following command:
 $ ./venv/bin/circusd ./circus.ini
 ```
 
-Now visit [http://127.0.0.1:9999](http://127.0.0.1:9999), you should  see the **hello world** app. The difference now is that the socket is managed by Circus and there are several web workers that are accepting connections against it.
+Now visit [http://localhost:8080/](http://localhost:8080/), you should see the **Plone** website.
 
 Also can run as a daemon service, executing the following command:
 
