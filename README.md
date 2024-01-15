@@ -2,26 +2,13 @@
 
 A demonstration of Plone deployment with WSGI using [Circus](https://circus.readthedocs.io/), A Process & Socket Manager.
 
-This is pretty minimal, it's a bit stupid to not have
-``zeoclient`` and ``zeoserver`` here, because you can't just
-add a worker in [circus](https://circus.readthedocs.io/) the way it is running now.
-
-While it works, it is just a proof of concept, and
-I only added a Plone site as a test.
-
-To start circus, run
-
-```bash
-./bin/circusd circus.ini
-```
-
-This keeps circus in the foreground.
-
 You can experiment with ``circusctl`` which is similar to
 ``supervisorctl``.
 Additionally, there is ``circus-top`` to experiment with.
 
 Have fun
+
+---
 
 ## Installation
 
@@ -50,7 +37,7 @@ $ ./venv/bin/buildout -vvv
 Run it using ``circusd``, executing the following command:
 
 ```bash
-$ ./venv/bin/circusd ./circus.ini
+$ ./venv/bin/circusd ./zope-deploy.ini
 ```
 
 Now visit [http://localhost:8080/](http://localhost:8080/), you should see the **Plone** website.
@@ -58,8 +45,10 @@ Now visit [http://localhost:8080/](http://localhost:8080/), you should see the *
 Also can run as a daemon service, executing the following command:
 
 ```bash
-$ ./venv/bin/circusd --daemon ./circus.ini
+$ ./venv/bin/circusd --daemon ./zope-deploy.ini
 ```
+
+This keeps ``circusd`` in the foreground mode.
 
 You can checkout the monitor stats console, like a ``top`` command, executing the following command:
 
