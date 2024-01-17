@@ -42,3 +42,4 @@ venv/
 deploy/enmeshed/etc/*.json
 deploy/enmeshed/log/*
 regenv/
+disable
