@@ -39,7 +39,4 @@ venv/
 *_build/
 # excludes
 .env
-deploy/enmeshed/etc/*.json
-deploy/enmeshed/log/*
-regenv/
 disable
