@@ -1,6 +1,8 @@
 # Plone WSGI Circus Demo
 
-A demonstration of Plone deployment with WSGI using [Circus](https://circus.readthedocs.io/), A Process & Socket Manager.
+A demonstration of Plone deployment with WSGI using ``Circus``.
+
+> [Circus](https://circus.readthedocs.io/), A Process & Socket Manager.
 
 You can experiment with ``circusctl`` which is similar to
 ``supervisorctl``.
@@ -47,7 +49,7 @@ $ ./venv/bin/buildout
 This command above generates the WSGI ``zope-deploy.ini`` file used for the ``circusd`` command to start the service.
 
 ```bash
-$ ./venv/bin/circusd ./zope-deploy.ini
+$ ./bin/circusd ./zope-deploy.ini
 ```
 
 Now visit [http://localhost:8080/](http://localhost:8080/), you should can create and see the **Plone** website.
@@ -63,16 +65,16 @@ $ ./venv/bin/buildout -c zeo.cfg
 This command above generates the WSGI ``zeo-deploy.ini`` file used for the ``circusd`` command to start the service.
 
 ```bash
-$ ./venv/bin/circusd ./zeo-deploy.ini
+$ ./bin/circusd ./zeo-deploy.ini
 ```
 
 Now visit the following links:
 
 - [http://localhost:8082/](http://localhost:8082/), you should can create and see the **Plone** website running on Zeo client 1.
 
-- [http://localhost:8083/](http://localhost:8082/), you should can create and see the **Plone** website running on Zeo client 2.
+- [http://localhost:8083/](http://localhost:8083/), you should can create and see the **Plone** website running on Zeo client 2.
 
-- [http://localhost:8083/](http://localhost:8082/), you should can create and see the **Plone** website running on Zeo client on debug mode.
+- [http://localhost:8084/](http://localhost:8084/), you should can create and see the **Plone** website running on Zeo client on debug mode.
 
 
 ---
@@ -86,7 +88,7 @@ Circus installs some scripts to manage this project.
 Run it using ``circusd``, executing the following command:
 
 ```bash
-$ ./venv/bin/circusd ./WSGI_NAME.ini
+$ ./bin/circusd ./WSGI_NAME.ini
 ```
 
 > Where ``WSGI_NAME`` you will be replace for the WSGI filename generated with the ``buildout`` command.
@@ -94,7 +96,7 @@ $ ./venv/bin/circusd ./WSGI_NAME.ini
 Also can run as a daemon service, executing the following command:
 
 ```bash
-$ ./venv/bin/circusd --daemon ./WSGI_NAME.ini
+$ ./bin/circusd --daemon ./WSGI_NAME.ini
 ```
 
 > Where ``WSGI_NAME`` you will be replace for the WSGI filename generated with the ``buildout`` command.
@@ -106,7 +108,7 @@ This keeps ``circusd`` in the foreground mode.
 You can checkout the monitor stats console, like a ``top`` command, executing the following command:
 
 ```bash
-$ ./venv/bin/circus-top
+$ ./bin/circus-top
 ```
 
 ### circus control
@@ -114,25 +116,25 @@ $ ./venv/bin/circus-top
 You can checkout the status service, executing the following command:
 
 ```bash
-$ ./venv/bin/circusctl status
+$ ./bin/circusctl status
 ```
 
 You can start the circus service, executing the following command:
 
 ```bash
-$ ./venv/bin/circusctl start
+$ ./bin/circusctl start
 ```
 
 You can stop the circus service, executing the following command:
 
 ```bash
-$ ./venv/bin/circusctl stop
+$ ./bin/circusctl stop
 ```
 
 You can restart the circus service, executing the following command:
 
 ```bash
-$ ./venv/bin/circusctl restart
+$ ./bin/circusctl restart
 ```
 
 Full Documentation is available at [https://circus.readthedocs.io/](https://circus.readthedocs.io/).
