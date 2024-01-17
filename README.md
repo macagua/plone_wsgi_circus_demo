@@ -12,6 +12,12 @@ Have fun
 
 ---
 
+## Tested it
+
+- Plone 5.2.14 with Python 3.6.15.
+
+---
+
 ## Installation
 
 Here, a tutorial step by step of deployment with Plone WSGI using Circus:
